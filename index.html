@@ -1,66 +1,159 @@
 <!DOCTYPE html>
-<div class="course"><span class="code">ATC-101</span> Antropología Cultural <span class="credits">4</span></div>
-<div class="course"><span class="code">IFT-101</span> Introducción a la Informática <span class="credits">4</span></div>
-<div class="course"><span class="code">LNG-101</span> Lenguaje <span class="credits">4</span></div>
-</section>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malla Curricular – Educación Intercultural Bilingüe</title>
+  <style>
+    :root {
+      --celeste-claro: #e6f7fb;
+      --celeste-medio: #b3e5f2;
+      --celeste-fuerte: #4fc3dc;
+      --celeste-oscuro: #0288a7;
+    }
 
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: var(--celeste-claro);
+      color: #033;
+    }
 
-<section class="semester">
-<h3>Semestre 2</h3>
-<div class="course"><span class="code">IDE-102</span> Idioma Español I <span class="credits">4</span></div>
-<div class="course"><span class="code">MAT-101</span> Matemática Básica <span class="credits">4</span></div>
-<div class="course"><span class="code">CIN-102</span> Ciudadanía Intercultural <span class="credits">4</span></div>
-<div class="course"><span class="code">PSE-202</span> Psicología Educativa <span class="credits">4</span></div>
-<div class="course"><span class="code">IAU-102</span> Idioma Autóctono I <span class="credits">4</span></div>
-</section>
+    header {
+      background-color: var(--celeste-oscuro);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
 
+    header h1 {
+      margin: 0;
+      font-size: 1.6rem;
+    }
 
-<section class="semester">
-<h3>Semestre 3</h3>
-<div class="course"><span class="code">SDR-201</span> Salud y Derechos Sexuales y Reproductivos <span class="credits">4</span></div>
-<div class="course"><span class="code">IAU-201</span> Idioma Autóctono II <span class="credits">4</span></div>
-<div class="course"><span class="code">PEI-101</span> Pedagogía Intercultural <span class="credits">4</span></div>
-<div class="course"><span class="code">LIG-301</span> Lingüística General <span class="credits">4</span></div>
-<div class="course"><span class="code">RNC-101</span> Recursos Naturales de la Costa Caribe Nicaragüense <span class="credits">4</span></div>
-</section>
+    header h2 {
+      margin-top: 0.5rem;
+      font-weight: normal;
+      font-size: 1rem;
+    }
 
+    .container {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
 
-<section class="semester">
-<h3>Semestre 4</h3>
-<div class="course"><span class="code">MEI-201</span> Metodología de la Investigación I <span class="credits">4</span></div>
-<div class="course"><span class="code">IAU-202</span> Idioma Autóctono III <span class="credits">4</span></div>
-<div class="course"><span class="code">IDE-201</span> Idioma Español II <span class="credits">4</span></div>
-<div class="course"><span class="code">DGE-202</span> Didáctica General en EIB <span class="credits">4</span></div>
-</section>
+    .semester {
+      background-color: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      border-top: 8px solid var(--celeste-fuerte);
+      overflow: hidden;
+    }
 
+    .semester h3 {
+      margin: 0;
+      padding: 1rem;
+      background-color: var(--celeste-medio);
+      text-align: center;
+      font-size: 1.1rem;
+    }
 
-<section class="semester">
-<h3>Semestre 5</h3>
-<div class="course"><span class="code">DIA-301</span> Didáctica del Idioma Autóctono I <span class="credits">4</span></div>
-<div class="course"><span class="code">MEI-301</span> Metodología de la Investigación II <span class="credits">4</span></div>
-<div class="course"><span class="code">PDC-301</span> Planificación y Evaluación Educativa <span class="credits">4</span></div>
-<div class="course"><span class="code">ADQ-301</span> Adquisición del Español como L2 <span class="credits">4</span></div>
-</section>
+    .course {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #e0f2f7;
+    }
 
+    .course:last-child {
+      border-bottom: none;
+    }
 
-<section class="semester">
-<h3>Semestre 6</h3>
-<div class="course"><span class="code">PDO-401</span> Práctica Docente <span class="credits">4</span></div>
-<div class="course"><span class="code">DIA-302</span> Didáctica del Idioma Autóctono II <span class="credits">4</span></div>
-<div class="course"><span class="code">ESA-302</span> Estadística Aplicada <span class="credits">4</span></div>
-<div class="course"><span class="code">DES-302</span> Didáctica del Español como L2 <span class="credits">4</span></div>
-<div class="course"><span class="code">CUL-302</span> Cultura de la Costa Caribe <span class="credits">4</span></div>
-</section>
+    .code {
+      font-weight: bold;
+      color: var(--celeste-oscuro);
+    }
 
+    .credits {
+      float: right;
+      background-color: var(--celeste-claro);
+      padding: 0.2rem 0.5rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+    }
 
-</main>
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.85rem;
+      color: #055;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Licenciatura en Ciencias de la Educación</h1>
+    <h2>Mención en Educación Intercultural Bilingüe</h2>
+  </header>
 
+  <main class="container">
 
-<footer>
-Total de la carrera: 6 semestres · 120 créditos
-</footer>
+    <section class="semester">
+      <h3>Semestre 1</h3>
+      <div class="course"><span class="code">BIL-101</span> Bilingüismo e Interculturalidad <span class="credits">4</span></div>
+      <div class="course"><span class="code">HIS-101</span> Historia de la Costa Caribe Nicaragüense <span class="credits">4</span></div>
+      <div class="course"><span class="code">ATC-101</span> Antropología Cultural <span class="credits">4</span></div>
+      <div class="course"><span class="code">IFT-101</span> Introducción a la Informática <span class="credits">4</span></div>
+      <div class="course"><span class="code">LNG-101</span> Lenguaje <span class="credits">4</span></div>
+    </section>
 
+    <section class="semester">
+      <h3>Semestre 2</h3>
+      <div class="course"><span class="code">IDE-102</span> Idioma Español I <span class="credits">4</span></div>
+      <div class="course"><span class="code">MAT-101</span> Matemática Básica <span class="credits">4</span></div>
+      <div class="course"><span class="code">CIN-102</span> Ciudadanía Intercultural <span class="credits">4</span></div>
+      <div class="course"><span class="code">PSE-202</span> Psicología Educativa <span class="credits">4</span></div>
+      <div class="course"><span class="code">IAU-102</span> Idioma Autóctono I <span class="credits">4</span></div>
+    </section>
 
-<script src="script.js"></script>
+    <section class="semester">
+      <h3>Semestre 3</h3>
+      <div class="course"><span class="code">SDR-201</span> Salud y Derechos Sexuales y Reproductivos <span class="credits">4</span></div>
+      <div class="course"><span class="code">IAU-201</span> Idioma Autóctono II <span class="credits">4</span></div>
+      <div class="course"><span class="code">PEI-101</span> Pedagogía Intercultural <span class="credits">4</span></div>
+      <div class="course"><span class="code">LIG-301</span> Lingüística General <span class="credits">4</span></div>
+      <div class="course"><span class="code">RNC-101</span> Recursos Naturales de la Costa Caribe Nicaragüense <span class="credits">4</span></div>
+    </section>
+
+    <section class="semester">
+      <h3>Semestre 4</h3>
+      <div class="course"><span class="code">MEI-201</span> Metodología de la Investigación I <span class="credits">4</span></div>
+      <div class="course"><span class="code">IAU-202</span> Idioma Autóctono III <span class="credits">4</span></div>
+      <div class="course"><span class="code">IDE-201</span> Idioma Español II <span class="credits">4</span></div>
+      <div class="course"><span class="code">DGE-202</span> Didáctica General en EIB <span class="credits">4</span></div>
+    </section>
+
+    <section class="semester">
+      <h3>Semestre 5</h3>
+      <div class="course"><span class="code">DIA-301</span> Didáctica del Idioma Autóctono I <span class="credits">4</span></div>
+      <div class="course"><span class="code">MEI-301</span> Metodología de la Investigación II <span class="credits">4</span></div>
+      <div class="course"><span class="code">PDC-301</span> Planificación y Evaluación Educativa <span class="credits">4</span></div>
+      <div class="course"><span class="code">ADQ-301</span> Adquisición del Español como L2 <span class="credits">4</span></div>
+    </section>
+
+    <section class="semester">
+      <h3>Semestre 6</h3>
+      <div class="course"><span class="code">PDO-401</span> Práctica Docente <span class="credits">4</span></div>
+      <div class="course"><span class="code">DIA-302</span> Didáctica del Idioma Autóctono II <span class="credits">4</span></div>
+      <div class="course"><span class="code">ESA-302</span> Estadística Aplicada <span class="credits">4</span></div>
+      <div class="course"><span class="code">DES-302</span> Didáctica del Español como L2 <span class="credits">4</span></div>
+      <div class="course"><span class="code">CUL-302</span> Cultura de la Costa Caribe <span class="credits">4</span></div>
+    </section>
+
+  </main>
+
+  <footer>
+    Total de la carrera: 6 semestres · 120 créditos
+  </footer>
 </body>
 </html>
