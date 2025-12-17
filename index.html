@@ -657,15 +657,33 @@
     return depCourse && depCourse.classList.contains('completed');
   }
   
-function isSemesterReadyForNext(semester) {
-  const semesterCourses = semester.querySelectorAll('.course');
-  const withoutDeps = Array.from(semesterCourses).filter(c => !chainDependencies[c.dataset.id]);
-  
-  if (withoutDeps.length === 0) return true;
-  
-  const completedWithoutDeps = withoutDeps.filter(c => c.classList.contains('completed')).length;
-  
-  return completedWithoutDeps >= withoutDeps.length - 1;
+  function isSemesterReadyForNext(semester) {
+    const semesterCourses = semester.querySelectorAll('.course');
+    const withoutDeps = Array.from(semesterCourses).filter(c => !chainDependencies[c.dataset.id]);
+    
+    if (withoutDeps.length === 0) return true;
+    
+    const completedWithoutDeps = withoutDeps.filter(c => c.classList.contains('completed')).length;
+    
+    return completedWithoutDeps >= withoutDeps.length - 1;
+  }
+
+  function removeChecksFromLockedSemesters() {
+    const semesters = document.querySelectorAll('.semester');
+    
+    semesters.forEach((semester, index) => {
+      if (index === 0) return;
+      
+      const prevSemester = semesters[index - 1];
+      const prevReady = isSemesterReadyForNext(prevSemester);
+      
+      if (!prevReady) {
+        const currentCourses = semester.querySelectorAll('.course');
+        currentCourses.forEach(course => {
+          course.classList.remove('completed');
+        });
+      }
+    });
   }
 
   function updateAll() {
@@ -675,7 +693,6 @@ function isSemesterReadyForNext(semester) {
     
     semesters.forEach((semester, index) => {
       const semesterCourses = semester.querySelectorAll('.course');
-      const semesterInputs = semester.querySelectorAll('.credits-input');
       
       if (index > 0) {
         const prevSemester = semesters[index - 1];
