@@ -15,14 +15,12 @@
       --gris-claro: #f8fafc;
       --gris-texto: #475569;
       --gris-oscuro: #334155;
-      --error: #dc2626;
-      --exito: #16a34a;
     }
 
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #e6f0fa 0%, #d4e4fa 100%);
+      background-color: var(--azul-muy-claro);
       color: var(--gris-oscuro);
       font-weight: 450;
       line-height: 1.6;
@@ -31,12 +29,11 @@
     }
 
     header {
-      background: linear-gradient(135deg, var(--azul) 0%, #2563eb 100%);
+      background-color: var(--azul);
       color: var(--blanco);
       padding: 2rem 1.5rem;
       text-align: center;
       border-bottom: 4px solid var(--cafe-claro);
-      box-shadow: 0 4px 20px rgba(30, 58, 138, 0.25);
     }
 
     header h1 {
@@ -47,7 +44,6 @@
       max-width: 800px;
       margin: 0 auto;
       line-height: 1.3;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     }
 
     .container {
@@ -80,9 +76,8 @@
       font-size: 1.4rem;
       font-weight: bold;
       color: var(--blanco);
-      background: linear-gradient(to right, var(--azul), #3b82f6);
+      background-color: var(--azul);
       border-bottom: 3px solid var(--cafe-claro);
-      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
     }
 
     .course {
@@ -169,7 +164,7 @@
       color: var(--azul);
       margin-bottom: 4px;
       letter-spacing: 0.5px;
-      background: linear-gradient(to right, var(--azul-muy-claro), #e0f2fe);
+      background-color: var(--azul-muy-claro);
       padding: 4px 10px;
       border-radius: 12px;
       display: inline-block;
@@ -222,53 +217,15 @@
       border-top: 1px dashed var(--azul-claro);
     }
 
-    .total-credits {
-      text-align: center;
-      padding: 1.5rem;
-      background: linear-gradient(135deg, var(--blanco) 0%, #f0f9ff 100%);
-      margin: 2rem auto;
-      max-width: 800px;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(30, 58, 138, 0.15);
-      border: 2px solid var(--azul-suave);
-    }
-
-    .total-credits h3 {
-      margin: 0 0 1rem 0;
-      color: var(--azul);
-      font-size: 1.3rem;
-    }
-
-    .total-credits-value {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: var(--azul);
-      margin: 0.5rem 0;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-    }
-
-    .credits-max {
-      color: var(--gris-texto);
-      font-size: 1rem;
-    }
-
-    .warning {
-      color: var(--error);
-      font-size: 0.9rem;
-      margin-top: 0.5rem;
-      font-weight: 500;
-    }
-
     footer {
       text-align: center;
       padding: 2rem;
       font-size: 0.95rem;
       color: var(--gris-oscuro);
-      background: linear-gradient(to bottom, var(--blanco), #f8fafc);
+      background-color: var(--blanco);
       margin-top: 3rem;
       border-top: 3px solid var(--cafe-claro);
       line-height: 1.4;
-      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
     }
 
     .palette-show {
@@ -285,18 +242,6 @@
       border-radius: 50%;
       border: 2px solid var(--blanco);
       box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-    }
-
-    .dependency-warning {
-      font-size: 0.75rem;
-      color: var(--error);
-      margin-top: 4px;
-      font-style: italic;
-      display: none;
-    }
-
-    .course.locked .dependency-warning {
-      display: block;
     }
 
     @media (max-width: 768px) {
@@ -388,7 +333,6 @@
       <div class="course-info">
         <div class="course-code">IDE-102</div>
         <div class="course-name">Idioma Español I</div>
-        <div class="dependency-warning">Requiere completar Semestre I</div>
         <div class="credits-container">
           <span class="credits-label">Créditos:</span>
           <input type="number" min="0" max="10" value="4" class="credits-input" data-course="IDE-102" disabled>
@@ -399,7 +343,6 @@
       <div class="course-info">
         <div class="course-code">MAT-101</div>
         <div class="course-name">Matemática Básica</div>
-        <div class="dependency-warning">Requiere completar Semestre I</div>
         <div class="credits-container">
           <span class="credits-label">Créditos:</span>
           <input type="number" min="0" max="10" value="4" class="credits-input" data-course="MAT-101" disabled>
@@ -410,7 +353,6 @@
       <div class="course-info">
         <div class="course-code">CIN-102</div>
         <div class="course-name">Ciudadanía Intercultural</div>
-        <div class="dependency-warning">Requiere completar Semestre I</div>
         <div class="credits-container">
           <span class="credits-label">Créditos:</span>
           <input type="number" min="0" max="10" value="4" class="credits-input" data-course="CIN-102" disabled>
@@ -421,7 +363,6 @@
       <div class="course-info">
         <div class="course-code">PSE-202</div>
         <div class="course-name">Psicología Educativa</div>
-        <div class="dependency-warning">Requiere completar Semestre I</div>
         <div class="credits-container">
           <span class="credits-label">Créditos:</span>
           <input type="number" min="0" max="10" value="4" class="credits-input" data-course="PSE-202" disabled>
@@ -432,7 +373,6 @@
       <div class="course-info">
         <div class="course-code">IAU-102</div>
         <div class="course-name">Idioma Autóctono I</div>
-        <div class="dependency-warning">Requiere completar Semestre I</div>
         <div class="credits-container">
           <span class="credits-label">Créditos:</span>
           <input type="number" min="0" max="10" value="4" class="credits-input" data-course="IAU-102" disabled>
@@ -447,7 +387,6 @@
       <div class="course-info">
         <div class="course-code">SDR-201</div>
         <div class="course-name">Salud y Derechos Sexuales y Reproductivos</div>
-        <div class="dependency-warning">Requiere completar Semestre II</div>
         <div class="credits-container">
           <span class="credits-label">Créditos:</span>
           <input type="number" min="0" max="10" value="4" class="credits-input" data-course="SDR-201" disabled>
@@ -458,7 +397,6 @@
       <div class="course-info">
         <div class="course-code">IAU-201</div>
         <div class="course-name">Idioma Autóctono II</div>
-        <div class="dependency-warning">Requiere completar Idioma Autóctono I</div>
         <div class="credits-container">
           <span class="credits-label">Créditos:</span>
           <input type="number" min="0" max="10" value="4" class="credits-input" data-course="IAU-201" disabled>
@@ -469,7 +407,6 @@
       <div class="course-info">
         <div class="course-code">PEI-101</div>
         <div class="course-name">Pedagogía Intercultural</div>
-        <div class="dependency-warning">Requiere completar Semestre II</div>
         <div class="credits-container">
           <span class="credits-label">Créditos:</span>
           <input type="number" min="0" max="10" value="4" class="credits-input" data-course="PEI-101" disabled>
@@ -480,7 +417,6 @@
       <div class="course-info">
         <div class="course-code">LIG-301</div>
         <div class="course-name">Lingüística General</div>
-        <div class="dependency-warning">Requiere completar Semestre II</div>
         <div class="credits-container">
           <span class="credits-label">Créditos:</span>
           <input type="number" min="0" max="10" value="4" class="credits-input" data-course="LIG-301" disabled>
@@ -491,7 +427,6 @@
       <div class="course-info">
         <div class="course-code">RNC-101</div>
         <div class="course-name">Recursos Naturales de la Costa Caribe Nicaragüense</div>
-        <div class="dependency-warning">Requiere completar Semestre II</div>
         <div class="credits-container">
           <span class="credits-label">Créditos:</span>
           <input type="number" min="0" max="10" value="4" class="credits-input" data-course="RNC-101" disabled>
@@ -506,7 +441,6 @@
       <div class="course-info">
         <div class="course-code">MEI-201</div>
         <div class="course-name">Metodología de la Investigación I</div>
-        <div class="dependency-warning">Requiere completar Semestre III</div>
         <div class="credits-container">
           <span class="credits-label">Créditos:</span>
           <input type="number" min="0" max="10" value="4" class="credits-input" data-course="MEI-201" disabled>
@@ -517,7 +451,6 @@
       <div class="course-info">
         <div class="course-code">IAU-202</div>
         <div class="course-name">Idioma Autóctono III</div>
-        <div class="dependency-warning">Requiere completar Idioma Autóctono II</div>
         <div class="credits-container">
           <span class="credits-label">Créditos:</span>
           <input type="number" min="0" max="10" value="4" class="credits-input" data-course="IAU-202" disabled>
@@ -528,7 +461,6 @@
       <div class="course-info">
         <div class="course-code">IDE-201</div>
         <div class="course-name">Idioma Español II</div>
-        <div class="dependency-warning">Requiere completar Idioma Español I</div>
         <div class="credits-container">
           <span class="credits-label">Créditos:</span>
           <input type="number" min="0" max="10" value="4" class="credits-input" data-course="IDE-201" disabled>
@@ -539,7 +471,6 @@
       <div class="course-info">
         <div class="course-code">DGE-202</div>
         <div class="course-name">Didáctica General en EIB</div>
-        <div class="dependency-warning">Requiere completar Semestre III</div>
         <div class="credits-container">
           <span class="credits-label">Créditos:</span>
           <input type="number" min="0" max="10" value="4" class="credits-input" data-course="DGE-202" disabled>
@@ -554,7 +485,6 @@
       <div class="course-info">
         <div class="course-code">DIA-301</div>
         <div class="course-name">Didáctica del Idioma Autóctono I</div>
-        <div class="dependency-warning">Requiere completar Idioma Autóctono III</div>
         <div class="credits-container">
           <span class="credits-label">Créditos:</span>
           <input type="number" min="0" max="10" value="4" class="credits-input" data-course="DIA-301" disabled>
@@ -565,7 +495,6 @@
       <div class="course-info">
         <div class="course-code">MEI-301</div>
         <div class="course-name">Metodología de la Investigación II</div>
-        <div class="dependency-warning">Requiere completar Metodología de la Investigación I</div>
         <div class="credits-container">
           <span class="credits-label">Créditos:</span>
           <input type="number" min="0" max="10" value="4" class="credits-input" data-course="MEI-301" disabled>
@@ -576,7 +505,6 @@
       <div class="course-info">
         <div class="course-code">PDC-301</div>
         <div class="course-name">Planificación y Evaluación Educativa</div>
-        <div class="dependency-warning">Requiere completar Semestre IV</div>
         <div class="credits-container">
           <span class="credits-label">Créditos:</span>
           <input type="number" min="0" max="10" value="4" class="credits-input" data-course="PDC-301" disabled>
@@ -587,7 +515,6 @@
       <div class="course-info">
         <div class="course-code">ADQ-301</div>
         <div class="course-name">Adquisición del Español como L2</div>
-        <div class="dependency-warning">Requiere completar Semestre IV</div>
         <div class="credits-container">
           <span class="credits-label">Créditos:</span>
           <input type="number" min="0" max="10" value="4" class="credits-input" data-course="ADQ-301" disabled>
@@ -602,7 +529,6 @@
       <div class="course-info">
         <div class="course-code">PDO-401</div>
         <div class="course-name">Práctica Docente</div>
-        <div class="dependency-warning">Requiere completar Semestre V</div>
         <div class="credits-container">
           <span class="credits-label">Créditos:</span>
           <input type="number" min="0" max="10" value="4" class="credits-input" data-course="PDO-401" disabled>
@@ -613,7 +539,6 @@
       <div class="course-info">
         <div class="course-code">DIA-302</div>
         <div class="course-name">Didáctica del Idioma Autóctono II</div>
-        <div class="dependency-warning">Requiere completar Didáctica del Idioma Autóctono I</div>
         <div class="credits-container">
           <span class="credits-label">Créditos:</span>
           <input type="number" min="0" max="10" value="4" class="credits-input" data-course="DIA-302" disabled>
@@ -624,7 +549,6 @@
       <div class="course-info">
         <div class="course-code">ESA-302</div>
         <div class="course-name">Estadística Aplicada</div>
-        <div class="dependency-warning">Requiere completar Semestre V</div>
         <div class="credits-container">
           <span class="credits-label">Créditos:</span>
           <input type="number" min="0" max="10" value="4" class="credits-input" data-course="ESA-302" disabled>
@@ -635,7 +559,6 @@
       <div class="course-info">
         <div class="course-code">DES-302</div>
         <div class="course-name">Didáctica del Español como L2</div>
-        <div class="dependency-warning">Requiere completar Semestre V</div>
         <div class="credits-container">
           <span class="credits-label">Créditos:</span>
           <input type="number" min="0" max="10" value="4" class="credits-input" data-course="DES-302" disabled>
@@ -646,7 +569,6 @@
       <div class="course-info">
         <div class="course-code">CUL-302</div>
         <div class="course-name">Cultura de la Costa Caribe</div>
-        <div class="dependency-warning">Requiere completar Semestre V</div>
         <div class="credits-container">
           <span class="credits-label">Créditos:</span>
           <input type="number" min="0" max="10" value="4" class="credits-input" data-course="CUL-302" disabled>
@@ -656,21 +578,9 @@
   </section>
 </main>
 
-<div class="total-credits">
-  <h3>Total de Créditos Acumulados</h3>
-  <div class="total-credits-value" id="totalCredits">0</div>
-  <div class="credits-max">de 104 créditos totales</div>
-  <div class="warning" id="creditWarning" style="display:none;">
-    ⚠️ Estás por debajo del total esperado para este semestre
-  </div>
-</div>
-
 <footer>
   <div style="font-weight: bold; margin-bottom: 15px; color: var(--azul); font-size: 1.1rem;">
     Malla Curricular Interactiva – Educación Intercultural Bilingüe
-  </div>
-  <div style="margin-bottom: 10px;">
-    Haz clic en cada materia para marcarla como completada. Los créditos son editables.
   </div>
   <div style="margin-top: 15px; font-size: 0.85rem; color: var(--gris-texto);">
     Plan de Estudios – Licenciatura en Ciencias de la Educación con Mención en Educación Intercultural Bilingüe
@@ -688,8 +598,6 @@
 <script>
   const courses = document.querySelectorAll('.course');
   const creditInputs = document.querySelectorAll('.credits-input');
-  const totalCreditsEl = document.getElementById('totalCredits');
-  const creditWarning = document.getElementById('creditWarning');
 
   const chainDependencies = {
     'IAU-201': 'IAU-102',
@@ -739,44 +647,6 @@
     
     localStorage.setItem('eduProgress', JSON.stringify(progress));
     localStorage.setItem('eduCredits', JSON.stringify(credits));
-  }
-
-  function updateTotalCredits() {
-    let total = 0;
-    creditInputs.forEach(input => {
-      const course = input.closest('.course');
-      if (course.classList.contains('completed') && !course.classList.contains('locked')) {
-        total += parseInt(input.value) || 0;
-      }
-    });
-    
-    totalCreditsEl.textContent = total;
-    
-    const expected = getExpectedCredits();
-    if (total < expected) {
-      creditWarning.style.display = 'block';
-    } else {
-      creditWarning.style.display = 'none';
-    }
-  }
-
-  function getExpectedCredits() {
-    const semesters = document.querySelectorAll('.semester');
-    let expected = 0;
-    
-    semesters.forEach(semester => {
-      const coursesInSemester = semester.querySelectorAll('.course');
-      const allCompleted = Array.from(coursesInSemester).every(c => c.classList.contains('completed'));
-      
-      if (allCompleted) {
-        coursesInSemester.forEach(course => {
-          const input = course.querySelector('.credits-input');
-          expected += parseInt(input.defaultValue) || 4;
-        });
-      }
-    });
-    
-    return expected;
   }
 
   function checkDependencies(course) {
@@ -847,7 +717,6 @@
       }
     });
     
-    updateTotalCredits();
     saveProgress();
   }
 
@@ -866,12 +735,7 @@
     input.addEventListener('change', () => {
       if (input.value < 0) input.value = 0;
       if (input.value > 10) input.value = 10;
-      updateTotalCredits();
       saveProgress();
-    });
-    
-    input.addEventListener('input', () => {
-      updateTotalCredits();
     });
   });
 
