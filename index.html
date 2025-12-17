@@ -656,33 +656,16 @@
     const depCourse = document.querySelector(`[data-id="${deps}"]`);
     return depCourse && depCourse.classList.contains('completed');
   }
-
-  function isSemesterReadyForNext(semester) {
-    const semesterCourses = semester.querySelectorAll('.course');
-    const withoutDeps = Array.from(semesterCourses).filter(c => !chainDependencies[c.dataset.id]);
-    
-    if (withoutDeps.length === 0) return true;
-    
-    return withoutDeps.every(c => c.classList.contains('completed'));
-  }
-
-  function removeChecksFromLockedSemesters() {
-    const semesters = document.querySelectorAll('.semester');
-    
-    semesters.forEach((semester, index) => {
-      if (index === 0) return;
-      
-      const prevSemester = semesters[index - 1];
-      const prevCourses = prevSemester.querySelectorAll('.course');
-      const allPrevCompleted = Array.from(prevCourses).every(c => c.classList.contains('completed'));
-      
-      if (!allPrevCompleted) {
-        const currentCourses = semester.querySelectorAll('.course');
-        currentCourses.forEach(course => {
-          course.classList.remove('completed');
-        });
-      }
-    });
+  
+function isSemesterReadyForNext(semester) {
+  const semesterCourses = semester.querySelectorAll('.course');
+  const withoutDeps = Array.from(semesterCourses).filter(c => !chainDependencies[c.dataset.id]);
+  
+  if (withoutDeps.length === 0) return true;
+  
+  const completedWithoutDeps = withoutDeps.filter(c => c.classList.contains('completed')).length;
+  
+  return completedWithoutDeps >= withoutDeps.length - 1;
   }
 
   function updateAll() {
