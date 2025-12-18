@@ -6,21 +6,21 @@
   <title>Licenciatura en Educación Intercultural Bilingüe</title>
   <style>
     :root {
-  --primary: #AB4CF9;
-  --primary-soft: #CA7DF9;
-  --primary-muted: #EEE9FF;
-  --secondary: #F896D8;
-  --secondary-soft: #FCD3EC;
-  --accent: #EDF67D;
-  --card-bg: #FFFFFF;
-  --card-border: #564592;
-  --code-bg: #F5F2FF;
-  --text-primary: #2E2A4A;
-  --text-secondary: #564592;
-  --text-muted: #7A74A3;
-  --white: #FFFFFF;
-  --gray-light: #F8F7FC;
-}
+      --primary: #AB4CF9;
+      --primary-soft: #CA7DF9;
+      --primary-muted: #EEE9FF;
+      --secondary: #F896D8;
+      --secondary-soft: #FCD3EC;
+      --accent: #EDF67D;
+      --card-bg: #FFFFFF;
+      --card-border: #564592;
+      --code-bg: #F5F2FF;
+      --text-primary: #2E2A4A;
+      --text-secondary: #564592;
+      --text-muted: #7A74A3;
+      --white: #FFFFFF;
+      --gray-light: #F8F7FC;
+    }
 
     body {
       margin: 0;
@@ -41,14 +41,26 @@
       border-bottom: 4px solid var(--secondary);
     }
 
-    header h1 {
-      margin: 0;
+    .header-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .title-line-1 {
+      margin: 0 0 8px 0;
       font-size: 1.8rem;
       font-weight: 700;
       letter-spacing: 0.3px;
-      max-width: 800px;
-      margin: 0 auto;
       line-height: 1.3;
+    }
+
+    .title-line-2 {
+      margin: 0;
+      font-size: 1.3rem;
+      font-weight: 400;
+      letter-spacing: 0.2px;
+      line-height: 1.2;
+      color: var(--accent);
     }
 
     .container {
@@ -233,6 +245,19 @@
       line-height: 1.4;
     }
 
+    .footer-title {
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: var(--primary);
+      font-size: 1.1rem;
+    }
+
+    .footer-subtitle {
+      margin-top: 15px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
     .palette-show {
       display: flex;
       justify-content: center;
@@ -255,8 +280,16 @@
         gap: 1.5rem;
       }
       
-      header h1 {
+      .header-content {
+        padding: 0 1rem;
+      }
+      
+      .title-line-1 {
         font-size: 1.5rem;
+      }
+      
+      .title-line-2 {
+        font-size: 1.1rem;
       }
       
       .semester h2 {
@@ -274,7 +307,10 @@
 <body>
 
 <header>
-  <h1>Licenciatura en Ciencias de la Educación con Mención en Educación Intercultural Bilingüe</h1>
+  <div class="header-content">
+    <h1 class="title-line-1">Licenciatura en Ciencias de la Educación</h1>
+    <h2 class="title-line-2">con Mención en Educación Intercultural Bilingüe</h2>
+  </div>
 </header>
 
 <main class="container">
@@ -584,19 +620,19 @@
 </main>
 
 <footer>
-  <div style="font-weight: bold; margin-bottom: 15px; color: var(--azul); font-size: 1.1rem;">
+  <div class="footer-title">
     Malla Curricular Interactiva – Educación Intercultural Bilingüe
   </div>
-  <div style="margin-top: 15px; font-size: 0.85rem; color: var(--gris-texto);">
+  <div class="footer-subtitle">
     Plan de Estudios – Licenciatura en Ciencias de la Educación con Mención en Educación Intercultural Bilingüe
   </div>
   
   <div class="palette-show">
-    <div class="palette-color" style="background-color: #1e3a8a"></div>
-    <div class="palette-color" style="background-color: #93c5fd"></div>
-    <div class="palette-color" style="background-color: #dbeafe"></div>
-    <div class="palette-color" style="background-color: #bfdbfe"></div>
-    <div class="palette-color" style="background-color: #d9b99b"></div>
+    <div class="palette-color" style="background-color: #AB4CF9"></div>
+    <div class="palette-color" style="background-color: #CA7DF9"></div>
+    <div class="palette-color" style="background-color: #F896D8"></div>
+    <div class="palette-color" style="background-color: #EDF67D"></div>
+    <div class="palette-color" style="background-color: #564592"></div>
   </div>
 </footer>
 
