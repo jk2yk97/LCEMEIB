@@ -6,22 +6,24 @@
   <title>Licenciatura en Educación Intercultural Bilingüe</title>
   <style>
     :root {
-      --azul: #1e40af;
-      --azul-claro: #60a5fa;
-      --azul-muy-claro: #eff6ff;
-      --azul-suave: #bfdbfe;
-      --arena: #a16207;
+      --header: #a2d2ff;
+      --bg-body: #bde0fe;
+      --card-bg: #ffffff;
+      --card-border: #cdb4db;
+      --completed: #ffc8dd;
+      --accent: #ffafcc;
+      --code-bg: #cdb4db;
+      --text-dark: #333333;
+      --text-light: #666666;
       --blanco: #ffffff;
       --gris-claro: #f8fafc;
-      --gris-texto: #475569;
-      --gris-oscuro: #334155;
     }
 
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--azul-muy-claro);
-      color: var(--gris-oscuro);
+      background-color: var(--bg-body);
+      color: var(--text-dark);
       font-weight: 450;
       line-height: 1.6;
       padding-bottom: 2rem;
@@ -29,11 +31,11 @@
     }
 
     header {
-      background-color: var(--azul);
+      background-color: var(--header);
       color: var(--blanco);
       padding: 2rem 1.5rem;
       text-align: center;
-      border-bottom: 4px solid var(--arena);
+      border-bottom: 4px solid var(--accent);
     }
 
     header h1 {
@@ -56,17 +58,17 @@
     }
 
     .semester {
-      background-color: var(--blanco);
+      background-color: var(--card-bg);
       border-radius: 18px;
-      box-shadow: 0 8px 24px rgba(30, 64, 175, 0.15);
+      box-shadow: 0 8px 24px rgba(162, 210, 255, 0.2);
       overflow: hidden;
-      border: 2px solid var(--azul-suave);
+      border: 2px solid var(--card-border);
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .semester:hover {
       transform: translateY(-5px);
-      box-shadow: 0 12px 28px rgba(30, 64, 175, 0.2);
+      box-shadow: 0 12px 28px rgba(162, 210, 255, 0.3);
     }
 
     .semester h2 {
@@ -76,13 +78,13 @@
       font-size: 1.4rem;
       font-weight: bold;
       color: var(--blanco);
-      background-color: var(--azul);
-      border-bottom: 3px solid var(--arena);
+      background-color: var(--header);
+      border-bottom: 3px solid var(--accent);
     }
 
     .course {
       padding: 1.2rem 1.2rem;
-      border-bottom: 1px solid var(--azul-muy-claro);
+      border-bottom: 1px solid var(--bg-body);
       cursor: pointer;
       transition: all 0.3s;
       position: relative;
@@ -91,7 +93,7 @@
       display: flex;
       align-items: flex-start;
       gap: 14px;
-      background-color: var(--blanco);
+      background-color: var(--card-bg);
     }
 
     .course:last-child {
@@ -103,7 +105,7 @@
       width: 18px;
       height: 18px;
       border-radius: 50%;
-      border: 2px solid var(--azul);
+      border: 2px solid var(--header);
       transition: all 0.3s;
       flex-shrink: 0;
       margin-top: 2px;
@@ -111,13 +113,13 @@
     }
 
     .course.completed {
-      background-color: var(--azul-suave);
-      color: var(--gris-texto);
+      background-color: var(--completed);
+      color: var(--text-light);
     }
 
     .course.completed::before {
-      background-color: var(--arena);
-      border-color: var(--arena);
+      background-color: var(--accent);
+      border-color: var(--accent);
       content: '✓';
       color: var(--blanco);
       font-size: 10px;
@@ -139,18 +141,18 @@
     }
 
     .course.locked.completed::before {
-      border-color: var(--gris-texto);
-      background-color: var(--gris-texto);
+      border-color: var(--text-light);
+      background-color: var(--text-light);
       color: var(--gris-claro);
     }
 
     .course:not(.locked):hover {
-      background-color: rgba(96, 165, 250, 0.15);
+      background-color: rgba(255, 175, 204, 0.15);
       transform: translateX(6px);
     }
 
     .course:not(.locked):hover::before {
-      background-color: var(--azul-claro);
+      background-color: var(--accent);
       transform: scale(1.15);
     }
 
@@ -161,14 +163,14 @@
     .course-code {
       font-size: 0.85rem;
       font-weight: 600;
-      color: var(--azul);
+      color: var(--header);
       margin-bottom: 4px;
       letter-spacing: 0.5px;
-      background-color: var(--azul-muy-claro);
+      background-color: var(--code-bg);
       padding: 4px 10px;
       border-radius: 12px;
       display: inline-block;
-      border: 1px solid var(--azul-claro);
+      border: 1px solid var(--header);
     }
 
     .course-name {
@@ -180,10 +182,10 @@
     .credits-input {
       width: 60px;
       padding: 6px 10px;
-      border: 1px solid var(--azul-claro);
+      border: 1px solid var(--header);
       border-radius: 8px;
       background-color: var(--blanco);
-      color: var(--gris-oscuro);
+      color: var(--text-dark);
       font-weight: 500;
       text-align: center;
       transition: all 0.2s;
@@ -191,19 +193,19 @@
 
     .credits-input:focus {
       outline: none;
-      border-color: var(--azul);
-      box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(255, 175, 204, 0.2);
     }
 
     .credits-input:disabled {
       background-color: var(--gris-claro);
-      color: var(--gris-texto);
+      color: var(--text-light);
       cursor: not-allowed;
     }
 
     .credits-label {
       font-size: 0.85rem;
-      color: var(--gris-texto);
+      color: var(--text-light);
       margin-right: 8px;
       font-weight: 500;
     }
@@ -214,17 +216,17 @@
       justify-content: space-between;
       margin-top: 10px;
       padding-top: 10px;
-      border-top: 1px dashed var(--azul-claro);
+      border-top: 1px dashed var(--header);
     }
 
     footer {
       text-align: center;
       padding: 2rem;
       font-size: 0.95rem;
-      color: var(--gris-oscuro);
+      color: var(--text-dark);
       background-color: var(--blanco);
       margin-top: 3rem;
-      border-top: 3px solid var(--arena);
+      border-top: 3px solid var(--accent);
       line-height: 1.4;
     }
 
