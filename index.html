@@ -6,11 +6,11 @@
   <title>Licenciatura en Educación Intercultural Bilingüe</title>
   <style>
     :root {
-      --azul: #1e3a8a;
-      --azul-claro: #93c5fd;
-      --azul-muy-claro: #dbeafe;
+      --azul: #1e40af;
+      --azul-claro: #60a5fa;
+      --azul-muy-claro: #eff6ff;
       --azul-suave: #bfdbfe;
-      --cafe-claro: #d9b99b;
+      --arena: #a16207;
       --blanco: #ffffff;
       --gris-claro: #f8fafc;
       --gris-texto: #475569;
@@ -33,7 +33,7 @@
       color: var(--blanco);
       padding: 2rem 1.5rem;
       text-align: center;
-      border-bottom: 4px solid var(--cafe-claro);
+      border-bottom: 4px solid var(--arena);
     }
 
     header h1 {
@@ -58,7 +58,7 @@
     .semester {
       background-color: var(--blanco);
       border-radius: 18px;
-      box-shadow: 0 8px 24px rgba(30, 58, 138, 0.15);
+      box-shadow: 0 8px 24px rgba(30, 64, 175, 0.15);
       overflow: hidden;
       border: 2px solid var(--azul-suave);
       transition: transform 0.3s, box-shadow 0.3s;
@@ -66,7 +66,7 @@
 
     .semester:hover {
       transform: translateY(-5px);
-      box-shadow: 0 12px 28px rgba(30, 58, 138, 0.2);
+      box-shadow: 0 12px 28px rgba(30, 64, 175, 0.2);
     }
 
     .semester h2 {
@@ -77,7 +77,7 @@
       font-weight: bold;
       color: var(--blanco);
       background-color: var(--azul);
-      border-bottom: 3px solid var(--cafe-claro);
+      border-bottom: 3px solid var(--arena);
     }
 
     .course {
@@ -116,10 +116,10 @@
     }
 
     .course.completed::before {
-      background-color: var(--cafe-claro);
-      border-color: var(--cafe-claro);
+      background-color: var(--arena);
+      border-color: var(--arena);
       content: '✓';
-      color: var(--azul);
+      color: var(--blanco);
       font-size: 10px;
       display: flex;
       align-items: center;
@@ -145,7 +145,7 @@
     }
 
     .course:not(.locked):hover {
-      background-color: rgba(147, 197, 253, 0.2);
+      background-color: rgba(96, 165, 250, 0.15);
       transform: translateX(6px);
     }
 
@@ -192,7 +192,7 @@
     .credits-input:focus {
       outline: none;
       border-color: var(--azul);
-      box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+      box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
     }
 
     .credits-input:disabled {
@@ -224,7 +224,7 @@
       color: var(--gris-oscuro);
       background-color: var(--blanco);
       margin-top: 3rem;
-      border-top: 3px solid var(--cafe-claro);
+      border-top: 3px solid var(--arena);
       line-height: 1.4;
     }
 
