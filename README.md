@@ -1,1 +1,3 @@
-# 01
+![LCEMEIB](https://raw.githubusercontent.com/jk2yk97/LCEMEIB/refs/heads/main/Lic.%20en%20Ciencias%20de%20la%20Edu.%20con%20Menci%C3%B3n%20en%20Edu.%20Intercultural%20Biling%C3%BCe%20Banner.png)
+-------
+La malla curricular de la Licenciatura en Ciencias de la Educación con Mención en Educación Intercultural Bilingüe (LCEMEIB) es una guía visual para organizar tu avance en la formación pedagógica intercultural. Te permite marcar fácilmente los cursos que ya completaste y ver de forma clara tu progreso académico, ayudándote a llevar un seguimiento estructurado y motivador de tu desarrollo como educador bilingüe.
